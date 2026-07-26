@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Node
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials.json
+secrets.yaml
+
+# Local data
+data/
+*.sqlite
+*.db
+*.dump
+
+# Editors and OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Local working notes — never committed
+scratch/
+notes-private/

@@ -1,0 +1,10 @@
+# Default owner for everything in the repository.
+* @wtfashwin
+
+# Architecture decisions are superseded, never edited.
+/docs/adr/ @wtfashwin
+
+# Invariant- and security-bearing documents. Changes here alter guarantees
+# the rest of the architecture depends on.
+/docs/architecture/reliability-invariants.md @wtfashwin
+/docs/architecture/security-and-federation.md @wtfashwin

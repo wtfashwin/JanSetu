@@ -1,0 +1,93 @@
+name: Source adapter
+description: Propose or claim a source adapter for a city or authority
+labels: ["adapters", "good-first-issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Adding a source for your own city is the most valuable contribution to
+        JanSetu. See the walkthrough in [CONTRIBUTING.md](../../CONTRIBUTING.md).
+
+  - type: input
+    id: jurisdiction
+    attributes:
+      label: Jurisdiction
+      placeholder: "e.g. India / Maharashtra / Pune"
+    validations:
+      required: true
+
+  - type: input
+    id: authority
+    attributes:
+      label: Publishing authority
+      placeholder: "e.g. city traffic police, municipal water department"
+    validations:
+      required: true
+
+  - type: input
+    id: source-url
+    attributes:
+      label: Public source URL
+      description: The page or feed carrying the notices. Must be publicly accessible.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Document format
+      multiple: true
+      options:
+        - HTML page
+        - PDF notice
+        - Scanned image PDF
+        - RSS / Atom
+        - JSON / REST API
+        - GTFS-RT
+        - Social media post
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: categories
+    attributes:
+      label: Event categories published
+      multiple: true
+      options:
+        - Road closure / diversion
+        - Water interruption
+        - Electricity interruption
+        - Public transport disruption
+        - Flooding / waterlogging
+        - Severe weather
+        - Public-service closure
+        - Examination-centre change
+        - Infrastructure damage
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: languages
+    attributes:
+      label: Languages and scripts
+      placeholder: "e.g. Marathi (Devanagari), English"
+    validations:
+      required: true
+
+  - type: input
+    id: cadence
+    attributes:
+      label: Typical publishing cadence
+      placeholder: "e.g. a few notices per week; bursts during monsoon"
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: This source is public and its use does not violate its terms
+          required: true
+        - label: I can provide real fixture documents, anonymised of incidental personal data
+        - label: I can provide at least one negative fixture — a document that should produce no event
