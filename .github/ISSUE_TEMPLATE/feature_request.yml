@@ -1,0 +1,63 @@
+name: Feature request
+description: Propose a capability or change
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Structural architecture changes require an ADR rather than a feature
+        request. See [ARCHITECTURE_STATUS.md](../../ARCHITECTURE_STATUS.md) for
+        the list of changes that qualify.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is difficult or impossible today? Describe the problem, not the solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What you suggest.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Simpler alternatives considered
+      description: >
+        What is the simplest thing that could work, and why is it insufficient?
+        Proposals that have not considered a simpler option are usually deferred.
+    validations:
+      required: true
+
+  - type: textarea
+    id: non-goals
+    attributes:
+      label: Non-goals
+      description: What this deliberately would not do.
+
+  - type: dropdown
+    id: scale
+    attributes:
+      label: Which scale does this serve?
+      options:
+        - PMVP — needed for the vertical slice
+        - City scale — needs a documented migration trigger
+        - National scale — needs a documented migration trigger
+        - Unsure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: invariants
+    attributes:
+      label: Confirmations
+      options:
+        - label: This does not require unknown information to be estimated or defaulted
+        - label: This does not let search or an LLM determine event truth
+        - label: This does not weaken official-confirmation requirements
