@@ -2,6 +2,21 @@
 
 > An open-source civic communication and public-response network for India.
 
+[![Status](https://img.shields.io/badge/status-architecture%20baseline-blue)](ARCHITECTURE_STATUS.md)
+[![Licence](https://img.shields.io/badge/licence-Apache--2.0-green)](LICENSE)
+
+> **Project status: architecture baseline.** This repository currently contains
+> design documents and decision records. There is no running system yet — no
+> backend, frontend, database, federation or deployment. See
+> [ARCHITECTURE_STATUS.md](ARCHITECTURE_STATUS.md).
+>
+> All city, national and billion-record figures in these documents are
+> **architectural scenarios based on documented assumptions, not production
+> claims.** Nothing here has been measured against a running system.
+
+**Start with the [architecture index](docs/architecture/README.md).**
+
+
 JanSetu helps government departments, local authorities, institutions and citizens share **verified, location-aware and actionable public information** through one simple interface.
 
 It is designed for situations where important information currently remains fragmented across:
