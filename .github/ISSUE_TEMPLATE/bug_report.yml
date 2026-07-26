@@ -1,0 +1,69 @@
+name: Bug report
+description: Something behaves incorrectly
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not report security vulnerabilities here.** See [SECURITY.md](../../SECURITY.md)
+        for private reporting.
+
+        If you have found *incorrect civic information* in a deployed instance,
+        report it through that instance's correction path rather than here.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you observed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      description: What should have happened, and why.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Ingestion / source adapters
+        - Parsers / evidence
+        - Trust rules / event state
+        - Projection / replay
+        - Geospatial
+        - Notifications
+        - Frontend
+        - Documentation / architecture
+        - Other / unsure
+    validations:
+      required: true
+
+  - type: input
+    id: invariant
+    attributes:
+      label: Invariant affected (if known)
+      description: See docs/architecture/reliability-invariants.md
+      placeholder: "e.g. I3 — community reports cannot produce official confirmation"
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Version, commit, OS, Python/Node version if relevant.
